@@ -45,3 +45,4 @@ Let's start building.
 
 1. [Arithmetic Expressions](chapter/001.md) — Parse and evaluate `1 + 2 * 3`. Introduces megaparsec, the AST, and tree-walk evaluation.
 2. [Variables and Let Bindings](chapter/002.md) — `let x = 5 in x + 1`. Error handling with `Either`, environments, and parser error messages.
+3. [Functions](chapter/003.md) — `let double = \x -> x + 2 in double 5`. Lambdas, closures, and application by juxtaposition.
