@@ -46,3 +46,5 @@ Let's start building.
 1. [Arithmetic Expressions](chapter/001.md) — Parse and evaluate `1 + 2 * 3`. Introduces megaparsec, the AST, and tree-walk evaluation.
 2. [Variables and Let Bindings](chapter/002.md) — `let x = 5 in x + 1`. Error handling with `Either`, environments, and parser error messages.
 3. [Functions](chapter/003.md) — `let double = \x -> x + 2 in double 5`. Lambdas, closures, and application by juxtaposition.
+4. [Simply-Typed Checking](chapter/004.md) — `\(x : Int) -> x + 1`. Type annotations, a type checker, and catching errors before runtime.
+   - [4b. GADTs vs System F](chapter/004b.md) — Side chapter. Two approaches to type-safe IRs, with a hands-on tutorial.
