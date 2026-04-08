@@ -24,14 +24,16 @@ This is also not an attempt to write another Haskell. Stephen Diehl's [Write You
 
 The implementation is in Haskell, using megaparsec for parsing. Each chapter produces a runnable language, building incrementally:
 
-1. An arithmetic expression evaluator (parse and evaluate `1 + 2 * 3`)
-2. Variables and let bindings
-3. Functions (lambda calculus, still dynamically typed)
-4. A simple type checker (explicit type annotations, no inference)
-5. Type inference (Hindley-Milner)
-6. Algebraic data types and pattern matching
-7. Row-polymorphic records
-8. Typed platform boundaries (the host/script interface)
+- [x] An arithmetic expression evaluator (parse and evaluate `1 + 2 * 3`)
+- [x] Variables and let bindings
+- [x] Functions (lambda calculus, still dynamically typed)
+- [x] A simple type checker (explicit type annotations, no inference)
+  - [x] Side chapter: GADTs vs System F for type-safe IRs
+- [x] Multi-line REPL and source spans (spans deferred; see chapter 5)
+- [ ] Type inference (Hindley-Milner)
+- [ ] Algebraic data types and pattern matching
+- [ ] Row-polymorphic records
+- [ ] Typed platform boundaries (the host/script interface)
 
 That's the rough trajectory. I'm fairly confident about the first few steps. The later ones — especially row polymorphism and the platform boundary — are where the real exploration happens, and where the plan might change.
 
@@ -48,3 +50,4 @@ Let's start building.
 3. [Functions](chapter/003.md) — `let double = \x -> x + 2 in double 5`. Lambdas, closures, and application by juxtaposition.
 4. [Simply-Typed Checking](chapter/004.md) — `\(x : Int) -> x + 1`. Type annotations, a type checker, and catching errors before runtime.
    - [4b. GADTs vs System F](chapter/004b.md) — Side chapter. Two approaches to type-safe IRs, with a hands-on tutorial.
+5. [Spans and Errors](chapter/005.md) — Multi-line REPL via isocline, source spans on the AST, and type errors that point at the wrong subexpression.
